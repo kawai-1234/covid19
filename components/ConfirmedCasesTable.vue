@@ -14,7 +14,7 @@
         </div>
       </div>
       <ul :class="$style.group">
-        <li :class="[$style.box, $style.parent, $style.hospitalized]">
+        <li :class="[$style.box, $style.recovered]">
           <div :class="$style.pillar">
             <div :class="$style.content">
               <span>{{ $t('入院中') }}</span>
@@ -24,32 +24,6 @@
               </span>
             </div>
           </div>
-          <ul :class="$style.group">
-            <li :class="[$style.box, $style.short, $style.minor]">
-              <div :class="$style.pillar">
-                <div :class="$style.content">
-                  <!-- eslint-disable vue/no-v-html-->
-                  <span v-html="$t('軽症・<br />中等症')" />
-                  <!-- eslint-enable vue/no-v-html-->
-                  <span>
-                    <strong>{{ 軽症中等症 }}</strong>
-                    <span :class="$style.unit">{{ $t('人') }}</span>
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li :class="[$style.box, $style.short, $style.severe]">
-              <div :class="$style.pillar">
-                <div :class="$style.content">
-                  <span>{{ $t('重症') }}</span>
-                  <span>
-                    <strong>{{ 重症 }}</strong>
-                    <span :class="$style.unit">{{ $t('人') }}</span>
-                  </span>
-                </div>
-              </div>
-            </li>
-          </ul>
         </li>
         <li :class="[$style.box, $style.deceased]">
           <div :class="$style.pillar">
@@ -62,7 +36,7 @@
             </div>
           </div>
         </li>
-        <li :class="[$style.box, $style.recovered]">
+        <li :class="[$style.box, $style.parent, $style.hospitalized]">
           <div :class="$style.pillar">
             <div :class="$style.content">
               <span>{{ $t('退院') }}</span>
@@ -72,6 +46,32 @@
               </span>
             </div>
           </div>
+          <ul :class="$style.group">
+            <li :class="[$style.box, $style.short, $style.minor]">
+              <div :class="$style.pillar">
+                <div :class="$style.content">
+                  <!-- eslint-disable vue/no-v-html-->
+                  <span v-html="$t('健康観察中')" />
+                  <!-- eslint-enable vue/no-v-html-->
+                  <span>
+                    <strong>{{ 健康観察中 }}</strong>
+                    <span :class="$style.unit">{{ $t('人') }}</span>
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li :class="[$style.box, $style.short, $style.severe]">
+              <div :class="$style.pillar">
+                <div :class="$style.content">
+                  <span>{{ $t('社会復帰') }}</span>
+                  <span>
+                    <strong>{{ 社会復帰 }}</strong>
+                    <span :class="$style.unit">{{ $t('人') }}</span>
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
         </li>
       </ul>
     </li>
@@ -96,19 +96,19 @@ export default Vue.extend({
       type: Number,
       required: true
     },
-    軽症中等症: {
-      type: Number,
-      required: true
-    },
-    重症: {
-      type: Number,
-      required: true
-    },
     死亡: {
       type: Number,
       required: true
     },
     退院: {
+      type: Number,
+      required: true
+    },
+    健康観察中: {
+      type: Number,
+      required: true
+    },
+    社会復帰: {
       type: Number,
       required: true
     }
