@@ -1218,7 +1218,7 @@
                 "居住地": "和歌山県",
                 "年代": "20代",
                 "性別": "女性",
-                "退院": null,
+                "退院": "○",
                 "date": "2020-03-05"
             },
             {
@@ -1918,25 +1918,25 @@
     "inspection_status_summary": {
         "date": "2020\/03\/26 11:00",
         "attr": "検査実施人数（累計）",
-        "value": 1405,
+        "value": 0,
         "children": [
             {
                 "attr": "検査実施件数（累計）",
-                "value": 3634,
+                "value": 0,
                 "children": [
                     {
                         "attr": "都内発生",
-                        "value": 2860
+                        "value": 0
                     },
                     {
                         "attr": "その他（チャーター便・クルーズ船等）",
-                        "value": 774
+                        "value": 0
                     }
                 ]
             }
         ]
     },
-    "lastUpdate": "2020\/03\/26 11:00",
+    "lastUpdate": "2020\/03\/28 09:00",
     "main_summary": {
         "attr": "検査実施人数",
         "value": 1405,
@@ -1947,15 +1947,15 @@
                 "children": [
                     {
                         "attr": "入院中",
-                        "value": 5
+                        "value": 4
                     },
                     {
                         "attr": "退院",
-                        "value": 11,
+                        "value": 12,
                         "children": [
                             {
                                 "attr": "健康観察中",
-                                "value": 1
+                                "value": 2
                             },
                             {
                                 "attr": "社会復帰",

@@ -18,40 +18,6 @@
         <flow-pc-advisory2 />
       </div>
     </div>
-    <h3>
-      <i18n
-        :class="$style.TitleSmall"
-        tag="span"
-        path="{advisory}による相談結果"
-      >
-        <span :class="$style.TitleLarge" place="advisory">
-          {{ $t('新型コロナ受診相談窓口') }}
-        </span>
-      </i18n>
-    </h3>
-    <div :class="[$style.Outer, $style.OuterLower]">
-      <div
-        :class="[$style.CardBlock, $style.CardBlockRequired, $style.Required]"
-      >
-        <flow-pc-required />
-      </div>
-      <div :class="[$style.CardBlock, $style.CardBlockPcr, $style.Pcr]">
-        <flow-pc-pcr />
-      </div>
-      <div :class="$style.NotRequired">
-        <flow-pc-not-required />
-      </div>
-      <div :class="$style.Hospitalized">
-        <flow-pc-hospitalized />
-      </div>
-    </div>
-    <p :class="$style.Note">
-      {{
-        $t(
-          '※保険適用となる検査は、当面の間、院内感染防止等の観点から、「帰国者・接触者外来」等の医療機関で実施'
-        )
-      }}
-    </p>
   </div>
 </template>
 
